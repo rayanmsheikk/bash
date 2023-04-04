@@ -1,3 +1,7 @@
-#!/data/data/com.termux/files/usr/bin/bash
-while read phone_number;
-do echo "Calling $phone_number" termux-telephony-call $phone_number done < phone_numbers.txt
+#!/bin/bash
+
+# Read the contents of the contacts.txt file and assign it to a variable
+contact_number=$(cat contacts.txt)
+
+# Print the contact number
+echo "The contact number is: $contact_number"
